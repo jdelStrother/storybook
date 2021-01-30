@@ -10,7 +10,7 @@ exports[`Storyshots App full app 1`] = `
     <img
       alt="logo"
       className="App-logo"
-      src="logo.svg"
+      src="file-stub"
     />
     <h2>
       Welcome to React
@@ -2327,6 +2327,12 @@ exports[`Storyshots CRA Dynamic import 1`] = `
 <div>
   Waiting for Dynamic Import
 </div>
+`;
+
+exports[`Storyshots Docs/Test NewStory123 1`] = `
+<h2>
+   Hello 
+</h2>
 `;
 
 exports[`Storyshots Force ReRender Default View 1`] = `
