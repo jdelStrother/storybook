@@ -3,7 +3,14 @@
 import { describe, it } from 'global';
 import { addSerializer } from 'jest-specific-snapshot';
 
-function snapshotTest({ item, asyncJest, framework, testMethod, testMethodParams }: any) {
+function snapshotTest({
+  item,
+  asyncJest,
+  concurrentJest,
+  framework,
+  testMethod,
+  testMethodParams,
+}: any) {
   const { name } = item;
   const context = { ...item, framework };
 
@@ -19,6 +26,21 @@ function snapshotTest({ item, asyncJest, framework, testMethod, testMethodParams
             ...testMethodParams,
           })
         ),
+      testMethod.timeout
+    );
+  } else if (concurrentJest === true) {
+    console.log('concurrent', name);
+    it.concurrent(
+      name,
+      () =>
+        new Promise((resolve, reject) => {
+          testMethod({
+            story: item,
+            context,
+            ...testMethodParams,
+          });
+          resolve();
+        }),
       testMethod.timeout
     );
   } else {

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button-1 with some emoji 1`] = `
+Array [
+  <input
+    onChange={[Function]}
+    value="abc"
+  />,
+  <p>
+    Change the input value then this text in the component file.
+  </p>,
+  <p>
+    The state of the input should be kept.
+  </p>,
+]
+`;

@@ -30,6 +30,7 @@ function ensureOptionsDefaults(options: StoryshotsOptions) {
   const {
     suite = 'Storyshots',
     asyncJest,
+    concurrentJest,
     storyNameRegex,
     storyKindRegex,
     renderer,
@@ -43,6 +44,7 @@ function ensureOptionsDefaults(options: StoryshotsOptions) {
 
   return {
     asyncJest,
+    concurrentJest,
     suite,
     storyNameRegex,
     storyKindRegex,

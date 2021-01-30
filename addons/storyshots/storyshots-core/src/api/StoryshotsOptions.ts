@@ -24,6 +24,7 @@ export interface StoryshotsTestMethod {
 
 export interface StoryshotsOptions {
   asyncJest?: boolean;
+  concurrentJest?: boolean;
   config?: (options: any) => void;
   integrityOptions?: IOptions | false;
   configPath?: string;

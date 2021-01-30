@@ -34,6 +34,7 @@ function testStorySnapshots(options: StoryshotsOptions = {}) {
   const { storybook, framework, renderTree, renderShallowTree } = loadFramework(options);
   const {
     asyncJest,
+    concurrentJest,
     suite,
     storyNameRegex,
     storyKindRegex,
@@ -86,6 +87,7 @@ function testStorySnapshots(options: StoryshotsOptions = {}) {
     snapshotsTests({
       data,
       asyncJest,
+      concurrentJest,
       suite,
       framework,
       testMethod,
