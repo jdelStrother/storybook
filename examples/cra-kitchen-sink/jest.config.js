@@ -23,12 +23,12 @@ module.exports = {
     'core-js/library/fn/object/assign': 'core-js/es/object/assign',
   },
   transform: {
-    '^.+\\.stories\\.[jt]sx?$': '@storybook/addon-storyshots/injectFileName',
+    '^.+\\.stories\\.[jt]sx?$': '<rootDir>/.storybook/transformer',
     '^.+\\.[jt]sx?$': '<rootDir>/../../scripts/utils/jest-transform-js.js',
     '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx',
     '^.+\\.svg$': '<rootDir>/../../node_modules/react-scripts/config/jest/fileTransform.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test|stories).[jt]s?(x)'],
   testPathIgnorePatterns: ['/node_modules/'],
   globals: {
     DOCS_MODE: false,
